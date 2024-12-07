@@ -186,10 +186,12 @@ sudo ufw reload
      ChallengeResponseAuthentication yes
      ```
 ![image](https://github.com/user-attachments/assets/3d7958f9-4593-49e8-870e-7a034aa48b68)
+
     - Retart the service:
        ```
        sudo systemctl restart sshd
        ```
+
 4. Configure PAM:
    ```bash
    sudo nano /etc/pam.d/sshd
