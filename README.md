@@ -126,7 +126,7 @@ sudo ufw reload
    ```plaintext
    [sshd]
    enabled = true
-   port = 2265
+   port = ssh
    logpath = /var/log/auth.log
    maxretry = 5
    ```
