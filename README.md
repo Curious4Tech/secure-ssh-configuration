@@ -137,7 +137,7 @@ sudo ufw reload
    sudo systemctl restart fail2ban
    sudo systemctl status fail2ban
    ```
-![image](https://github.com/user-attachments/assets/d03525fe-d923-43b9-a3ec-c6987b7be93b)
+![image](https://github.com/user-attachments/assets/2dad24de-187c-409f-a808-ae0989d5501c)
 
 ---
 
