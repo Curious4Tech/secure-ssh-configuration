@@ -104,9 +104,10 @@ sudo systemctl restart ssh
 ## **Step 4: Configure Firewall**
 Allow the new SSH port:
 ```bash
-sudo ufw allow 2222
+sudo ufw allow 2265
 sudo ufw reload
 ```
+![image](https://github.com/user-attachments/assets/4b4a1fe1-dd2f-4b38-9cb4-9a89256f469d)
 
 ---
 
@@ -115,22 +116,28 @@ sudo ufw reload
    ```bash
    sudo apt install fail2ban -y
    ```
+![image](https://github.com/user-attachments/assets/ed6549c0-6381-45aa-8f97-79f8a82d3834)
+
 2. Configure Fail2Ban:
    ```bash
-   sudo nano /etc/fail2ban/jail.local
+   sudo nano /etc/fail2ban/jail.conf
    ```
 3. Add the following under `[sshd]`:
    ```plaintext
    [sshd]
    enabled = true
-   port = 2222
+   port = 2265
    logpath = /var/log/auth.log
    maxretry = 5
    ```
+![image](https://github.com/user-attachments/assets/1a95dedf-ea25-43a3-9a65-4f17a8e9c2e4)
+
 4. Restart Fail2Ban:
    ```bash
    sudo systemctl restart fail2ban
+   sudo systemctl status fail2ban
    ```
+![image](https://github.com/user-attachments/assets/d03525fe-d923-43b9-a3ec-c6987b7be93b)
 
 ---
 
