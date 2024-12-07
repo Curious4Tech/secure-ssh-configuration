@@ -190,8 +190,6 @@ sudo ufw reload
      ```
    - Add:
      ```plaintext
-     auth required pam_google_authenticator.so
-     auth sufficient pam_unix.so
      AuthenticationMethods publickey,keyboard-interactive:pam
      ChallengeResponseAuthentication yes
 
@@ -211,13 +209,17 @@ sudo ufw reload
    Add:
    ```plaintext
    auth required pam_google_authenticator.so
+   auth sufficient pam_unix.so
    ```
-![image](https://github.com/user-attachments/assets/5d341732-54b2-441b-9b15-62ac8735cf10)
+![image](https://github.com/user-attachments/assets/061042fd-c008-44f7-affc-65a19d014672)
 
 5. Restart SSH:
    ```bash
    sudo systemctl restart ssh
    ```
+6. Verify the configuration
+
+![image](https://github.com/user-attachments/assets/90ea3113-6714-4a26-82ba-7945730d3204)
 
 ---
 
