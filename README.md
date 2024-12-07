@@ -49,11 +49,15 @@ This guide walks you through securing SSH on your server. Follow these steps to 
    ```bash
    ssh-keygen -t rsa -b 4096
    ```
+
+![image](https://github.com/user-attachments/assets/689372b7-72d2-472b-b598-694607d4fdbb)
+
 2. Copy the public key to the server:
    ```bash
    ssh-copy-id username@server_ip
    ```
-3. Disable password authentication for enhanced security (explained below).
+
+![image](https://github.com/user-attachments/assets/bdde71df-6b44-4068-84a7-dff95c3f2f9c)
 
 ---
 
@@ -70,19 +74,26 @@ This guide walks you through securing SSH on your server. Follow these steps to 
   ```plaintext
   PermitRootLogin no
   ```
+![image](https://github.com/user-attachments/assets/3de39ac8-8782-40a4-989a-86275b4dae78)
+
 - **Disable Password Authentication**:
   ```plaintext
   PasswordAuthentication no
   ```
+![image](https://github.com/user-attachments/assets/062535a8-5d7a-49ca-83eb-1a757487efe9)
+
 - **Enable Public Key Authentication**:
   ```plaintext
   PubkeyAuthentication yes
   ```
-- **Change the Default SSH Port** (e.g., `2222`):
+![image](https://github.com/user-attachments/assets/3cf08288-f939-401e-996e-9db5730a7a12)
+
+- **Change the Default SSH Port** (e.g., `2265`):
   ```plaintext
-  Port 2222
+  Port 2265
   ```
-  
+![image](https://github.com/user-attachments/assets/05f2bdd8-1783-4573-9897-549a3f5f78d6)
+
 ### Restart SSH Service
 ```bash
 sudo systemctl restart ssh
