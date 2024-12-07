@@ -32,10 +32,15 @@ This guide walks you through securing SSH on your server. Follow these steps to 
    ```bash
    sudo systemctl start ssh
    ```
+
+![image](https://github.com/user-attachments/assets/0c0bb7bd-6c81-4689-bc61-56ee13ba89cc)
+
 3. Check the status of the SSH service:
    ```bash
    sudo systemctl status ssh
    ```
+
+![image](https://github.com/user-attachments/assets/5b09b722-8bb2-46c8-baf5-f5575e076065)
 
 ---
 
