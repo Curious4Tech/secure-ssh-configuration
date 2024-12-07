@@ -11,14 +11,17 @@ This guide walks you through securing SSH on your server. Follow these steps to 
 
 ## **Step 1: Install and Enable SSH**
 ### Installing SSH
-1. Update your package manager:
+1. Update and upgrade your package manager:
    ```bash
-   sudo apt update
+   sudo apt update && sudo apt upgrade -y
    ```
+![image](https://github.com/user-attachments/assets/62aeddb9-bb42-487d-b012-1426358330de)
+
 2. Install the OpenSSH server:
    ```bash
    sudo apt install openssh-server -y
    ```
+![image](https://github.com/user-attachments/assets/f304c9c0-40cf-4937-9c97-0f3ce538bf96)
 
 ### Enabling and Starting SSH
 1. Enable the SSH service to start on boot:
