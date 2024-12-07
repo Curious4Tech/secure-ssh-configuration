@@ -150,14 +150,18 @@ sudo ufw reload
    ```plaintext
    AllowUsers your_username
    ```
+![image](https://github.com/user-attachments/assets/af88b08a-0920-4d48-9630-8081151e0563)
+
    Or, allow specific groups:
    ```plaintext
-   AllowGroups sshusers
+   AllowGroups your_groupname
    ```
 3. Restart SSH:
    ```bash
    sudo systemctl restart ssh
+   sudo systemctl status ssh
    ```
+![image](https://github.com/user-attachments/assets/ebbede0f-d331-4534-983a-d64eb1f4a33d)
 
 ---
 
