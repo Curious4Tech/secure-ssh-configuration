@@ -176,6 +176,13 @@ sudo ufw reload
    ```bash
    google-authenticator
    ```
+![image](https://github.com/user-attachments/assets/09b1db4e-a070-4195-8675-61d8f4ae968f)
+
+ - Follow and read carefully and then respond according to your desired configuratiom.
+
+![image](https://github.com/user-attachments/assets/a0257644-abd5-4459-ba31-e4e03d51ec28)
+
+
 3. Enable 2FA in the SSH configuration file:
    - Edit:
      ```bash
@@ -183,9 +190,14 @@ sudo ufw reload
      ```
    - Add:
      ```plaintext
+     auth required pam_google_authenticator.so
+     auth sufficient pam_unix.so
+     AuthenticationMethods publickey,keyboard-interactive:pam
      ChallengeResponseAuthentication yes
+
      ```
-![image](https://github.com/user-attachments/assets/3d7958f9-4593-49e8-870e-7a034aa48b68)
+![image](https://github.com/user-attachments/assets/0a7a66b3-167f-4f6d-b524-82d4fb9ca35f)
+
 
    - Retart the service:
        ```
@@ -200,6 +212,8 @@ sudo ufw reload
    ```plaintext
    auth required pam_google_authenticator.so
    ```
+![image](https://github.com/user-attachments/assets/5d341732-54b2-441b-9b15-62ac8735cf10)
+
 5. Restart SSH:
    ```bash
    sudo systemctl restart ssh
